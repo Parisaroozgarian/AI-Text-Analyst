@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body style="background-color: #121212; color: #e0e0e0; padding: 20px;">
+    {% if results %}
+    <div class="result">
+        <h1>Analysis Results</h1>
+        <p>Total number of sentences: {{ results.num_sentences }}</p>
+        <p>First sentence: {{ results.first_sentence }}</p>
+        
+        <h2>Sentiment Scores</h2>
+        <p>Positive: {{ results.sentiment_scores.pos }}</p>
+        <p>Negative: {{ results.sentiment_scores.neg }}</p>
+        <p>Neutral: {{ results.sentiment_scores.neu }}</p>
+        <p>Compound: {{ results.sentiment_scores.compound }}</p>
+        
+        <h2>Topics</h2>
+        <ul>
+            {% for topic in results.topics %}
+                <li>Topic: {{ topic | join(', ') }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+    <p>No analysis results to display yet.</p>
+    {% endif %}
+    
+    <a href="/" style="color: #007bff;">Analyze another text</a>
+</body>
+</html>
