@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analysis App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Text Analysis Application</h1>
+    </header>
+    <main class="container">
+        <form action="{{ url_for('analyze') }}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="text">Enter your text:</label>
+                <textarea id="text" name="text" rows="6"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="file">Or upload a text file:</label>
+                <input type="file" id="file" name="file">
+            </div>
+            <button type="submit" class="btn">Analyze</button>
+        </form>
+    </main>
+</body>
+</html>
