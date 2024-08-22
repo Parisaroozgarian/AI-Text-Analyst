@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-gradient-to-r from-zinc-900 to-blue-900">
+    <main class="container mx-auto px-5 md:px-0 py-24">
+        <div class="relative flex flex-col items-center justify-center gap-6">
+            <h1
+                class="text-3xl text-center sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-100 via-green-500 to-green-700 drop-shadow-lg tracking-wide pb-5">
+                Analysis Results
+            </h1>
+            <div class="flex items-center justify-center absolute sm:-bottom-[2rem] sm:-right-[2rem] lg:right-[5rem] xl:right-[10rem] 2xl:right-[14rem] sm:z-50">
+                <img src="{{ url_for('static', filename='Images/robot-result.png') }}" alt="robot" class="w-[230px] lg:w-[300px] h-full flex-shrink-0">
+            </div>
+            <div class="flex flex-col gap-4 bg-gray-100/50 backdrop-blur-[4px] p-5 rounded-lg w-full sm:w-3/4 lg:w-2/4">
+                <h2 class="text-white font-bold text-2xl text-center">Analysis Overview</h2>
+                <hr>
+                <div class="flex flex-col gap-1">
+                    <h3 class="text-lg font-semibold">Number of Sentences</h3>
+                    <span>{{ results.num_sentences }}</span>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <h3 class="text-lg font-semibold">First Sentence</h3>
+                    <span>{{ results.first_sentence }}</span>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <h3 class="text-lg font-semibold">Sentiment Analysis</h3>
+                    <span>{{ results.sentiment_plot|safe }}</span>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <h3 class="text-lg font-semibold">Topics</h3>
+                    <ul>
+                        {% for topic in results.topics %}
+                        <li>{{ topic | join(', ') }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <h3 class="text-lg font-semibold">Entities</h3>
+                    <div class="entities">
+                        {% for category, items in results.entities.items() %}
+                        <h3>{{ category.capitalize() }}</h3>
+                        <ul>
+                            {% for item in items %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
