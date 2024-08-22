@@ -26,10 +26,14 @@ The Text Analysis Application is an interactive web tool designed to perform com
 Here are some screenshots of the application in action:
 
 - **Home Page**:
-  ![Home Page](static/images/home_page.png)
+  
+  <img width="1279" alt="Screen Shot 2024-08-22 at 12 59 06 AM" src="https://github.com/user-attachments/assets/bab01c44-621a-47b9-970d-7aab670b2f78">
+
 
 - **Analysis Results**:
-  ![Analysis Results](static/images/results_page.png)
+  
+  <img width="1279" alt="Screen Shot 2024-08-22 at 1 28 12 AM" src="https://github.com/user-attachments/assets/535eb7bf-dedb-412d-bb34-86cf3d388519">
+
 
 ## Usage Examples 📋
 
@@ -39,7 +43,9 @@ Here are some screenshots of the application in action:
 
 **Output**: 
 - Sentiment: Positive
-- Sentiment Plot: ![Sentiment Plot](static/sentiment_plot.png)
+- Sentiment Plot:
+  <img width="480" alt="Screen Shot 2024-08-22 at 1 30 13 AM" src="https://github.com/user-attachments/assets/8c540c7a-9e01-4093-aa0c-d4aa514d80c3">
+
 
 ### Example 2: Topic Modeling
 
