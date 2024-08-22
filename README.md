@@ -54,18 +54,24 @@ Here are some screenshots of the application in action:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Pariasaroozgarian/AI-Text-Analyst.git
-Navigate to the Project Directory:
-bash
-Copy code
-cd AI-Text-Analyst
-Install Dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Run the Application:
-bash
-Copy code
-python app.py
-Access the Application:
-Open your web browser and go to http://localhost:5000.
+   git clone <repository-url>
+   ```
+
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd <project-directory>
+   ```
+
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Application**:
+   ```bash
+   python app.py
+   ```
+
+5. **Access the Application**:
+   Open your web browser and go to [http://localhost:5000](http://localhost:5000).
+```
