@@ -74,4 +74,3 @@ Here are some screenshots of the application in action:
 
 5. **Access the Application**:
    Open your web browser and go to [http://localhost:5000](http://localhost:5000).
-```
