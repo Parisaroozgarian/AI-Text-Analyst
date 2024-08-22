@@ -39,7 +39,7 @@ Here are some screenshots of the application in action:
 
 **Output**: 
 - Sentiment: Positive
-- Sentiment Plot: [View Plot](static/sentiment_plot.png)
+- Sentiment Plot: ![Sentiment Plot](static/sentiment_plot.png)
 
 ### Example 2: Topic Modeling
 
@@ -54,11 +54,11 @@ Here are some screenshots of the application in action:
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Pariasaroozgarian/AI-Text-Analyst.git
 Navigate to the Project Directory:
 bash
 Copy code
-cd <project-directory>
+cd AI-Text-Analyst
 Install Dependencies:
 bash
 Copy code
