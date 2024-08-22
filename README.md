@@ -44,6 +44,7 @@ Here are some screenshots of the application in action:
 **Output**: 
 - Sentiment: Positive
 - Sentiment Plot:
+  
   <img width="480" alt="Screen Shot 2024-08-22 at 1 30 13 AM" src="https://github.com/user-attachments/assets/8c540c7a-9e01-4093-aa0c-d4aa514d80c3">
 
 
